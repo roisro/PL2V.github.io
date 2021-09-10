@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link rel="stylesheet" href="css/style.css">
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <title>Maksimasi</title>
+    </head>
+
+    <body>
+           <!-- Navbar -->
+      <div class="navbar-fixed x scrollspy" id="x">
+        <nav class="blue darken-2">
+          <div>
+            <div class="nav-wrapper">
+              <a href="#x" class="brand-logo"><i class="material-icons"> layers</i>PL2V</a>
+              <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a> 
+              <ul class="right hide-on-med-and-down">
+                <li><a href=index.html>Home</a></li>
+                <li><a href=maksimasi.html>Maksimasi</a></li>
+                <li><a href=minimasi.html>Minimasi</a></li>
+              </ul>
+            </div>
+        </div>
+        </nav>
+      </div>
+
+      <!-- Side Nav -->
+      <ul class="sidenav" id="mobile-nav">
+        <li><a href=index.html>Home</a></li>
+        <li><a href=maksimasi.html>Maksimasi</a></li>
+        <li><a href=minimasi.html>Minimasi</a></li>
+      </ul>
+
+      
+      <!-- Slider -->
+      <div class="slider">
+        <ul class="slides">
+          <li>
+            <img src="img/1.png">
+            <div class="sldr caption center-align">
+                <h3>Teknik Riset Operasional</h3>
+                <h5 class="light grey-text text-lighten-3">Persamaan Linear 2 Variabel</h5>
+              </div
+          </li>
+          <li>
+            <img src="img/2.png"> 
+            <div class="sldr caption center-align">
+              <h3>TRO</h3>
+              <h5 class="light grey-text text-lighten-3">Aplikasi sederhana</h5>
+            </div
+          </li>
+        </ul>
+      </div>
+
+      <div class="center tengah">
+        <h3>Maksimasi</h3>
+      </div>
+
+      <!-- ROW -->
+      <div class="row container">
+        <div class="col s12">
+          <div class="row">
+            <div class="input-field col s3">
+              <input placeholder="Placeholder" id="first_name" value="SUMBER" disabled>
+            </div>
+            <div class="input-field col s3">
+              <input id="kolomVarA" value="VARIABEL A" disabled>
+            </div>
+            <div class="input-field col s3">
+              <input id="kolomVarB" value="VARIABEL B" disabled>
+            </div>
+            <div class="input-field col s3">
+              <input class="validate" value="KAPASITAS" disabled>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s3">
+              <input id="B1" value="BAHAN 1" disabled>
+            </div>
+            <div class="x input-field col s3">
+              <input id="kolomA1" type="number">
+            </div>
+            <div class="x input-field col s3">
+                <input id="kolomB1" type="number">
+            </div>
+            <div class="x input-field col s3">
+                <input id="kolomY1" type="number">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s3">
+              <input id="B2" type="text" value="BAHAN 2" disabled>
+            </div>
+            <div class="x input-field col s3">
+              <input id="kolomA2" type="number">
+            </div>
+            <div class="x input-field col s3">
+                <input id="kolomB2" type="number">
+            </div>
+            <div class="x input-field col s3">
+                <input id="kolomY2" type="number">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s3">
+              <input id="kolomFtujuan" type="text" value="Fungsi Tujuan" disabled>
+            </div>
+            <div class="x input-field col s3">
+              <input id="kolomAz" type="number">
+            </div>
+            <div class="x input-field col s3">
+                <input id="kolomBz" type="number">
+            </div>
+            <div class="input-field col s3">
+                <a class="waves-effect waves-light btn col s12" id="tombolHitung">Hitung</a><br>
+            </div>
+          </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <p id="hasil"></p>
+                </div>
+                <div class="input-field col s6">
+                    <p id="hasil2"></p>
+                </div>
+            </div>
+        </div>
+      </div>
+
+
+      <!-- Footer -->
+    <div>
+      <footer class="blue darken-2 white-text center">
+        <p class="flow-text"> PL2V APPS V.01<br/> Design By Rois || Logic By Fitra</p>
+      </footer>
+    </div>
+
+
+
+      <!--JavaScript at end of body for optimized loading-->
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script>
+        const sideNav = document.querySelectorAll('.sidenav');
+        M.Sidenav.init(sideNav);
+
+        const slider = document.querySelectorAll('.slider');
+        M.Slider.init(slider, {
+          indicators:false,
+          transition:600,
+          interval:3000
+        });
+
+        const parallax = document.querySelectorAll('.parallax');
+        M.Parallax.init(parallax);
+
+
+        const materialboxed = document.querySelectorAll('.materialboxed');
+        M.Materialbox.init(materialboxed);
+
+        const scrollspy = document.querySelectorAll('.scrollspy');
+        M.ScrollSpy.init(scrollspy, {
+          scrollOffset:50
+        });
+
+        // const FormSelect = document.querySelectorAll('.FormSelect');
+        // M.FormSelect.init(FormSelect);
+
+        // document.addEventListener('DOMContentLoaded', function() {
+        // var elems = document.querySelectorAll('FormSelect');
+        // var instances = M.FormSelect.init(elems, options);
+        // });
+      </script>
+
+
+
+<script>
+    var kolomA1 = document.querySelector("#kolomA1");
+    var kolomB1 = document.querySelector("#kolomB1");
+    var kolomY1 = document.querySelector("#kolomY1");
+    var kolomA2 = document.querySelector("#kolomA2");
+    var kolomB2 = document.querySelector("#kolomB2");
+    var kolomY2 = document.querySelector("#kolomY2");
+    var kolomAz = document.querySelector("#kolomAz");
+    var kolomBz = document.querySelector("#kolomBz");
+    var kolomBahan1 = document.querySelector("#kolomBahan1");
+    var kolomBahan2 = document.querySelector("#kolomBahan2");
+    var kolomVarA = document.querySelector("#kolomVarA");
+    var kolomVarB = document.querySelector("#kolomVarB");
+    var hasil = document.querySelector("#hasil");
+    console.log(kolomA1);
+    document.querySelector("#tombolHitung").addEventListener("click", hitung);
+
+    //input hanya berisi angka
+    kolomA1.addEventListener("input");
+    kolomB1.addEventListener("input");
+    kolomY1.addEventListener("input");
+    kolomA2.addEventListener("input");
+    kolomB2.addEventListener("input");
+    kolomY2.addEventListener("input");
+    kolomAz.addEventListener("input");
+    kolomBz.addEventListener("input");
+   
+    
+    function hitung(){
+        var A1 = kolomA1.value;
+        var B1 = kolomB1.value;
+        var Y1 = kolomY1.value;
+        var A2 = kolomA2.value;
+        var B2 = kolomB2.value;
+        var Y2 = kolomY2.value;
+        var Az = kolomAz.value;
+        var Bz = kolomBz.value;
+        var VarA = kolomVarA.value;
+        var VarB = kolomVarB.value;
+
+        //cek input
+        //cek input
+			if (A1 =="" || B1 =="" || Y1 =="" || A2 =="" || B2 =="" || Y2 =="" ||
+			A1 == null || B1 == null || Y1 == null || A2 == null || B2 == null || Y2 == null ){
+				hasil.innerHTML = "Silahkan mengisi semua kolom !";
+			} else {
+
+            //eliminasi
+            var A1a=A1*A2, B1a=B1*A2, Y1a=Y1*A2;
+            var A2a=A2*A1, B2a=B2*A1, Y2a=Y2*A1;
+            var Ba=B1a-B2a, Ya=Y1a-Y2a;
+            var B=Ya/Ba;
+            
+            //B disubstitusi ke persamaan 1
+            var A=(Y1-(B1*B))/A1;
+
+            // A & B disubstitusi ke Z
+            var Z=A*Az+B*Bz;
+
+            hasil.innerHTML = "Fungsi tujuan" +
+                "<br>Z = " + Az +"A + " + Bz +"B"+
+                "<br>Fungsi kendala / batasan" +
+                "<br>" + A1 +"A + " + B1 +"B " + "≥" + " " + Y1 +
+                "<br>" + A2 +"A + " + B2 +"B " + "≥" + " " + Y2;
+            hasil2.innerHTML = "Hasil Perhitungan" +
+                "<br>A = " + A +
+                "<br>B = " + B +
+                "<br>Z = " + Z;
+            }
+        }
+    
+     </script>
+    </body>
+</html>

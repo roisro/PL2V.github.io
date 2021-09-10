@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link rel="stylesheet" href="css/style.css"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <title>Home</title>
+    </head>
+
+    <body>
+           <!-- Navbar -->
+      <div class="navbar-fixed x scrollspy" id="x">
+        <nav class="blue darken-2">
+          <div>
+            <div class="nav-wrapper">
+              <a href="#" class="brand-logo"><i class="material-icons"> layers</i>PL2V</a>
+              <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a> 
+              <ul class="right hide-on-med-and-down">
+                <li><a href=index.html>Home</a></li>
+                <li><a href=maksimasi.html>Maksimasi</a></li>
+                <li><a href=minimasi.html>Minimasi</a></li>
+              </ul>
+            </div>
+        </div>
+        </nav>
+      </div>
+
+      <!-- Side Nav -->
+      <ul class="sidenav" id="mobile-nav">
+        <li><a href=index.html>Home</a></li>
+        <li><a href=maksimasi.html>Maksimasi</a></li>
+        <li><a href=minimasi.html>Minimasi</a></li>
+      </ul>
+
+      
+      <!-- Slider -->
+      <div class="slider">
+        <ul class="slides">
+          <li>
+            <img src="img/1.png">
+            <div class="sldr caption center-align">
+                <h3>Teknik Riset Operasional</h3>
+                <h5 class="light grey-text text-lighten-3">Persamaan Linear 2 Variabel</h5>
+              </div
+          </li>
+          <li>
+            <img src="img/2.png"> 
+            <div class="sldr caption center-align">
+              <h3>TRO</h3>
+              <h5 class="light grey-text text-lighten-3">Aplikasi sederhana</h5>
+            </div
+          </li>
+        </ul>
+      </div>
+
+      <section>
+        <!-- C1 -->
+        <div class="row satu">
+          <div class="col m6 s12">
+            <img src="img/img1.jpg" />
+          </div>
+    
+          <div class="col m1 s12">
+            <!-- kosong -->
+          </div>
+    
+          <div id="x" class="xyz col m5 s12">
+            <h2 class="center">
+              Selamat  Datang
+              <br/>
+            </h2>
+            <h5>
+              Aplikasi sederhana Persamaan Linear 2 Variabel,
+              Silahkan pilih menu Minimasi atau Maksimasi.
+            </h5>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <div>
+      <footer class="blue darken-2 white-text center">
+        <p class="flow-text"> PL2V APPS V.01<br/> TEKNIK RISET OPERASIONAL</p>
+      </footer>
+    </div>
+
+      <!--JavaScript at end of body for optimized loading-->
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script>
+        const sideNav = document.querySelectorAll('.sidenav');
+        M.Sidenav.init(sideNav);
+
+        const slider = document.querySelectorAll('.slider');
+        M.Slider.init(slider, {
+          indicators:false,
+          transition:600,
+          interval:4300
+        });
+      </script>
+    </body>
+  </html>
